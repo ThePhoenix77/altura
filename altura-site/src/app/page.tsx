@@ -9,17 +9,17 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <div className="animate-fade-in">
+      <main className="pt-20 container mx-auto px-4">
+        <div className="animate-slide-in">
           <Hero />
         </div>
-        <div className="animate-fade-in">
+        <div className="animate-slide-in" style={{ animationDelay: "0.2s" }}>
           <Features />
         </div>
-        <div className="animate-fade-in">
+        <div className="animate-slide-in" style={{ animationDelay: "0.4s" }}>
           <Portfolio />
         </div>
-        <div className="animate-fade-in">
+        <div className="animate-slide-in" style={{ animationDelay: "0.6s" }}>
           <Contact />
         </div>
       </main>

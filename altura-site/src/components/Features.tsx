@@ -24,15 +24,19 @@ const features = [
 export default function Features() {
   return (
     <section id="features" className="py-20">
-      <div className="container">
+      <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center font-heading">
-          Our Features
+          What We Do
         </h2>
+        <p className="text-lg mt-4 max-w-3xl mx-auto text-center text-foreground/80">
+          We specialize in creating modern, high-performance web solutions that
+          drive results.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="bg-secondary p-8 rounded-md text-center"
+              className="bg-secondary p-8 rounded-lg text-center transition-transform duration-300 ease-in-out transform hover:-translate-y-2"
             >
               <div className="flex justify-center mb-4">{feature.icon}</div>
               <h3 className="text-2xl font-bold font-heading">
