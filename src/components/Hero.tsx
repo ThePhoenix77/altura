@@ -30,7 +30,7 @@ export default function Hero() {
         <div className="mt-12 animate-fade-in" style={{ animationDelay: "1s" }}>
           <a
             href="#portfolio"
-            className="bg-primary text-primary-foreground px-8 py-4 rounded-md hover:bg-primary/90 transition-transform duration-300 ease-in-out transform hover:scale-105 animate-pulse-glow"
+            className="bg-primary text-primary-foreground px-8 py-3 rounded-md hover:bg-primary/90 transition-colors animate-pulse-glow"
           >
             View our work
           </a>
