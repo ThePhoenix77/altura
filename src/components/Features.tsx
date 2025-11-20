@@ -22,6 +22,7 @@ const features = [
 ];
 
 export default function Features() {
+  const delays = ["animate-delay-0", "animate-delay-100", "animate-delay-200"];
   return (
     <section id="features" className="py-20 animate-slide-in">
       <div className="container mx-auto px-4">
@@ -36,13 +37,9 @@ export default function Features() {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="bg-secondary p-8 rounded-lg text-center transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 animate-fade-in"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            >
+              className={`p-8 rounded-lg text-center transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:shadow-elevated animate-fade-in ${delays[i]}`}>
               <div className="flex justify-center mb-4">{feature.icon}</div>
-              <h3 className="text-2xl font-bold font-heading">
-                {feature.title}
-              </h3>
+              <h3 className="text-2xl font-bold font-heading">{feature.title}</h3>
               <p className="mt-2 text-foreground/80">{feature.description}</p>
             </div>
           ))}

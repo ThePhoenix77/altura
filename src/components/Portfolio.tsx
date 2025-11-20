@@ -19,6 +19,7 @@ const portfolioItems = [
 ];
 
 export default function Portfolio() {
+  const delays = ["animate-delay-0", "animate-delay-200", "animate-delay-400"];
   return (
     <section id="portfolio" className="py-20 animate-slide-in">
       <div className="container mx-auto px-4">
@@ -31,11 +32,7 @@ export default function Portfolio() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {portfolioItems.map((item, i) => (
-            <div
-              key={item.title}
-              className="bg-secondary rounded-lg overflow-hidden group relative animate-fade-in"
-              style={{ animationDelay: `${i * 0.2}s` }}
-            >
+            <div key={item.title} className={`rounded-lg overflow-hidden group relative animate-fade-in ${delays[i]}`}>
               <Image
                 src={item.image}
                 alt={item.title}

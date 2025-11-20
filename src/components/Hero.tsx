@@ -1,41 +1,44 @@
+import Image from "next/image";
+import { Container } from "@/components/ui";
+import Button from "@/components/ui/Button";
+import AuroraBackground from "@/components/ui/aurora-background";
+
 export default function Hero() {
   return (
-    <section className="relative py-48 md:py-64 text-center overflow-hidden">
-      <div className="absolute inset-0 bg-secondary opacity-30 animate-fade-in"></div>
-      <div className="container mx-auto px-4 relative z-10">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold font-heading animate-slide-in">
-          Crafting Digital{" "}
-          <span className="text-primary relative inline-block">
-            Experiences
-            <svg
-              className="absolute -bottom-2 left-0 w-full h-auto text-primary"
-              viewBox="0 0 255 12"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 10.5C56.3333 3.83333 164 -3 254 5"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+    <AuroraBackground className="relative bg-background text-foreground overflow-hidden">
+      <Container>
+        <div className="relative py-24 md:py-36 lg:py-44 flex items-center gap-8 min-h-[60vh]">
+          <div className="w-full md:w-6/12 z-10">
+            <h1 className="text-4xl md:text-6xl lg:text-display font-bold font-heading leading-tight">
+              Crafting digital experiences
+            </h1>
+            <p className="mt-6 text-lg md:text-xl text-foreground/80 max-w-2xl">
+              We build focused, performant websites and applications that drive
+              results and create memorable brand experiences.
+            </p>
+            <div className="mt-8 flex items-center gap-4">
+              <Button href="#portfolio" size="lg" variant="gradient">
+                View our work
+              </Button>
+              <Button variant="ghost" href="#contact" size="md">
+                Contact us
+              </Button>
+            </div>
+          </div>
+
+          <div className="hidden md:block md:w-6/12 relative">
+            <div className="absolute -right-12 top-0 w-[520px] h-[340px] rounded-xl overflow-hidden shadow-elevated">
+              <Image
+                src="https://picsum.photos/seed/hero/900/600"
+                alt="Hero visual"
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 520px, 100vw"
               />
-            </svg>
-          </span>
-        </h1>
-        <p className="text-lg md:text-xl mt-6 max-w-3xl mx-auto text-foreground/80 animate-fade-in" style={{ animationDelay: "0.5s" }}>
-          We are a software development agency that helps businesses build
-          beautiful and functional websites that leave a lasting impression.
-        </p>
-        <div className="mt-12 animate-fade-in" style={{ animationDelay: "1s" }}>
-          <a
-            href="#portfolio"
-            className="bg-primary text-primary-foreground px-8 py-3 rounded-md hover:bg-primary/90 transition-colors animate-pulse-glow"
-          >
-            View our work
-          </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </Container>
+    </AuroraBackground>
   );
 }

@@ -10,16 +10,16 @@ export default function Home() {
     <>
       <Header />
       <main className="pt-20 container mx-auto px-4">
-        <div className="animate-slide-in">
+        <div className="animate-slide-in animate-delay-0">
           <Hero />
         </div>
-        <div className="animate-slide-in" style={{ animationDelay: "0.2s" }}>
+        <div className="animate-slide-in animate-delay-200">
           <Features />
         </div>
-        <div className="animate-slide-in" style={{ animationDelay: "0.4s" }}>
+        <div className="animate-slide-in animate-delay-400">
           <Portfolio />
         </div>
-        <div className="animate-slide-in" style={{ animationDelay: "0.6s" }}>
+        <div className="animate-slide-in animate-delay-600">
           <Contact />
         </div>
       </main>
